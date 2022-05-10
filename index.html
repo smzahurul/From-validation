@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>From</title>
+
+    <style>
+        p {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 30px;
+        }
+        
+        input {
+            height: 30px;
+            width: 30%;
+            border: 2px solid yellowgreen;
+            border-radius: 30px;
+            padding: 10px;
+        }
+        
+        #button {
+            margin-left: 18%;
+            padding: 17px;
+            font-size: 16px;
+            border: 2px solid mediumaquamarine;
+            background-color: hotpink;
+            border-radius: 21px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Enter Your Bangla Number :
+        <input type="number" name="" id="input1" placeholder="Enter Your Bangla Number" />
+    </p>
+    <p>
+        Enter Your English Number :
+        <input type="number" name="" id="input2" placeholder="Enter Your English Number" />
+    </p>
+    <p><button id="button">Submit</button></p>
+
+    <script>
+        var submit = document.getElementById("button");
+        submit.addEventListener("click", () => {
+            var input1 = document.getElementById("input1");
+            var bangla = parseFloat(input1.value);
+            if (bangla > 100 || bangla < 0) {
+                input1.style.background = "red";
+            } else {
+                input1.style.background = "none";
+            }
+
+            var input2 = document.getElementById("input2");
+            var english = parseFloat(input2.value);
+            if (english > 100 || english < 0) {
+                input2.style.background = "red";
+            } else {
+                input2.style.background = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
